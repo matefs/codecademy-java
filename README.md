@@ -1,4 +1,5 @@
 # Codecademy Java
+<img width="2766" height="1550" alt="image" src="https://github.com/user-attachments/assets/a8e2165a-3e9d-4ebd-858c-8d733139062a" />
 
 Plataforma local estilo Codecademy para praticar Java: lições com instruções, editor Monaco, execução do código e validação automática.
 
