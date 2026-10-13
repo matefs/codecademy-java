@@ -1,0 +1,3 @@
+Saque de 30: true
+Saque de 500: false
+Saldo final: 70

@@ -12,6 +12,7 @@ import { useLocalStorageState } from "./hooks/useLocalStorageState";
 import { LessonSidebar } from "./components/LessonSidebar";
 import { InstructionsPanel } from "./components/InstructionsPanel";
 import { OutputConsole } from "./components/OutputConsole";
+import { registerJavaCompletionProvider } from "./editor/registerJavaCompletionProvider";
 
 export default function App() {
   const [lessonSummaries, setLessonSummaries] = useState<LessonSummary[]>([]);
@@ -124,9 +125,10 @@ export default function App() {
               <Editor
                 language="java"
                 theme="vs-dark"
+                beforeMount={registerJavaCompletionProvider}
                 value={currentSourceCode}
                 onChange={updateCurrentDraft}
-                options={{ fontSize: 14, minimap: { enabled: false }, scrollBeyondLastLine: false, tabSize: 4 }}
+                options={{ fontSize: 14, minimap: { enabled: false }, scrollBeyondLastLine: false, tabSize: 4, tabCompletion: "on" }}
               />
             </div>
             <OutputConsole

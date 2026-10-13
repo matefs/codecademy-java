@@ -1,0 +1,31 @@
+{
+  "id": "18-pattern-matching",
+  "order": 18,
+  "title": "Pattern matching",
+  "hints": [
+    "Casos com when precisam vir antes do caso sem guarda do mesmo tipo; senão o compilador acusa dominância.",
+    "case Ponto(int x, int y) when x == y -> \"Ponto na diagonal: \" + x;"
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "record\\s+Ponto\\s*\\(\\s*int\\s+x\\s*,\\s*int\\s+y\\s*\\)",
+      "failureMessage": "Crie record Ponto(int x, int y)."
+    },
+    {
+      "regex": "case\\s+Integer\\s+\\w+\\s+when\\b",
+      "failureMessage": "Use uma guarda: case Integer numero when ..."
+    },
+    {
+      "regex": "case\\s+String\\s+\\w+\\s+when\\b",
+      "failureMessage": "Use uma guarda: case String texto when ..."
+    },
+    {
+      "regex": "case\\s+Ponto\\s*\\(\\s*(int|var)\\s+\\w+\\s*,\\s*(int|var)\\s+\\w+\\s*\\)",
+      "failureMessage": "Desconstrua o record no case: case Ponto(int x, int y)."
+    },
+    {
+      "regex": "case\\s+null\\b",
+      "failureMessage": "Trate o valor nulo com case null."
+    }
+  ]
+}

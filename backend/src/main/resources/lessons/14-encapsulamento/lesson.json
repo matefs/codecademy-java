@@ -1,0 +1,27 @@
+{
+  "id": "14-encapsulamento",
+  "order": 14,
+  "title": "Encapsulamento",
+  "hints": [
+    "private int saldo; impede acesso direto de fora da classe.",
+    "Em sacar, retorne false se valor <= 0 ou valor > saldo, antes de alterar o saldo."
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "class\\s+ContaBancaria",
+      "failureMessage": "Crie a classe ContaBancaria."
+    },
+    {
+      "regex": "private\\s+int\\s+saldo",
+      "failureMessage": "O campo saldo deve ser private int."
+    },
+    {
+      "regex": "int\\s+getSaldo\\s*\\(\\s*\\)",
+      "failureMessage": "Crie o método int getSaldo()."
+    },
+    {
+      "regex": "boolean\\s+sacar\\s*\\(\\s*int\\s+\\w+\\s*\\)",
+      "failureMessage": "Crie o método boolean sacar(int valor)."
+    }
+  ]
+}

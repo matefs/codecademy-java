@@ -1,0 +1,27 @@
+{
+  "id": "15-interfaces",
+  "order": 15,
+  "title": "Interfaces",
+  "hints": [
+    "interface Voador { void voar(); }",
+    "Métodos que implementam uma interface precisam ser public."
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "interface\\s+Voador",
+      "failureMessage": "Crie a interface Voador."
+    },
+    {
+      "regex": "class\\s+Passaro\\s+implements\\s+Voador",
+      "failureMessage": "Passaro deve implementar Voador."
+    },
+    {
+      "regex": "class\\s+Aviao\\s+implements\\s+Voador",
+      "failureMessage": "Aviao deve implementar Voador."
+    },
+    {
+      "regex": "static\\s+void\\s+decolar\\s*\\(\\s*Voador\\s+\\w+\\s*\\)",
+      "failureMessage": "Crie static void decolar(Voador voador) na classe Main."
+    }
+  ]
+}

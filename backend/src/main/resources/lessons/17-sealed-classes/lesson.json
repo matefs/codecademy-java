@@ -1,0 +1,31 @@
+{
+  "id": "17-sealed-classes",
+  "order": 17,
+  "title": "Sealed classes",
+  "hints": [
+    "sealed interface Pagamento permits Pix, Cartao {}",
+    "case Cartao cartao -> \"Cartão de \" + cartao.valor() + \" em \" + cartao.parcelas() + \"x\";"
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "sealed\\s+(interface|class)\\s+Pagamento",
+      "failureMessage": "Declare Pagamento como sealed."
+    },
+    {
+      "regex": "permits\\s+\\w+\\s*,\\s*\\w+",
+      "failureMessage": "Liste os subtipos permitidos com permits."
+    },
+    {
+      "regex": "record\\s+Pix\\s*\\(",
+      "failureMessage": "Crie o record Pix."
+    },
+    {
+      "regex": "record\\s+Cartao\\s*\\(",
+      "failureMessage": "Crie o record Cartao."
+    },
+    {
+      "regex": "case\\s+Pix\\s+\\w+\\s*->",
+      "failureMessage": "Use pattern matching no switch: case Pix pix -> ..."
+    }
+  ]
+}

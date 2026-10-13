@@ -1,0 +1,27 @@
+{
+  "id": "12-heranca",
+  "order": 12,
+  "title": "Herança",
+  "hints": [
+    "class Carro extends Veiculo { ... }",
+    "O construtor de Carro deve chamar super(marca) na primeira linha."
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "class\\s+Veiculo",
+      "failureMessage": "Crie a classe Veiculo."
+    },
+    {
+      "regex": "class\\s+Carro\\s+extends\\s+Veiculo",
+      "failureMessage": "Carro deve herdar de Veiculo com extends."
+    },
+    {
+      "regex": "super\\s*\\(",
+      "failureMessage": "Chame o construtor da superclasse com super(...)."
+    },
+    {
+      "regex": "new\\s+Carro\\s*\\(",
+      "failureMessage": "Instancie um Carro com new Carro(...)."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "16-composicao",
+  "order": 16,
+  "title": "Composição",
+  "hints": [
+    "Carro TEM um Motor: private final Motor motor;",
+    "Receba o Motor no construtor de Carro em vez de usar extends."
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "class\\s+Motor",
+      "failureMessage": "Crie a classe Motor."
+    },
+    {
+      "regex": "class\\s+Carro\\s*\\{",
+      "failureMessage": "Carro não deve herdar de nenhuma classe; use composição."
+    },
+    {
+      "regex": "private\\s+(final\\s+)?Motor\\s+\\w+",
+      "failureMessage": "Carro deve ter um campo private Motor."
+    },
+    {
+      "regex": "new\\s+Carro\\s*\\(\\s*new\\s+Motor\\s*\\(",
+      "failureMessage": "Crie o carro passando o motor: new Carro(new Motor())."
+    }
+  ]
+}

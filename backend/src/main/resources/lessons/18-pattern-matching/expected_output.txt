@@ -1,0 +1,8 @@
+Inteiro negativo: -5
+Inteiro: 42
+Texto vazio
+Texto com 4 letras
+Ponto na diagonal: 3
+Ponto (1, 2)
+Nulo
+Desconhecido

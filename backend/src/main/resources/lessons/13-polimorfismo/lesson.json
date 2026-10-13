@@ -1,0 +1,27 @@
+{
+  "id": "13-polimorfismo",
+  "order": 13,
+  "title": "Polimorfismo",
+  "hints": [
+    "Instrumento[] instrumentos = { new Violao(), new Bateria() };",
+    "for (Instrumento instrumento : instrumentos) { instrumento.tocar(); }"
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "class\\s+Violao\\s+extends\\s+Instrumento",
+      "failureMessage": "Violao deve herdar de Instrumento."
+    },
+    {
+      "regex": "class\\s+Bateria\\s+extends\\s+Instrumento",
+      "failureMessage": "Bateria deve herdar de Instrumento."
+    },
+    {
+      "regex": "@Override",
+      "failureMessage": "Use @Override ao sobrescrever tocar()."
+    },
+    {
+      "regex": "Instrumento\\s*\\[\\s*\\]|List\\s*<\\s*Instrumento\\s*>",
+      "failureMessage": "Guarde os objetos em um array ou List do tipo Instrumento."
+    }
+  ]
+}
