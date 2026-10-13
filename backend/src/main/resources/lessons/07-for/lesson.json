@@ -1,0 +1,14 @@
+{
+  "id": "07-for",
+  "order": 7,
+  "title": "Laço for",
+  "hints": [
+    "Comece em 1 e use <= 5"
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "for\\s*\\(",
+      "failureMessage": "Use um laço for."
+    }
+  ]
+}

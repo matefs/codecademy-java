@@ -1,0 +1,23 @@
+{
+  "id": "02-variaveis",
+  "order": 2,
+  "title": "Variáveis",
+  "hints": [
+    "Use + para concatenar texto e variáveis.",
+    "Cuidado com os espaços: nome + \" tem \" + idade + \" anos\""
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "int\\s+idade\\s*=\\s*25",
+      "failureMessage": "Declare int idade = 25."
+    },
+    {
+      "regex": "String\\s+nome\\s*=\\s*\\\"Ana\\\"",
+      "failureMessage": "Declare String nome = \"Ana\"."
+    },
+    {
+      "regex": "println\\s*\\([^;]*nome[^;]*idade",
+      "failureMessage": "Use as variáveis nome e idade no println."
+    }
+  ]
+}

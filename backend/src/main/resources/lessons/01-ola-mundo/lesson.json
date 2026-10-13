@@ -1,0 +1,15 @@
+{
+  "id": "01-ola-mundo",
+  "order": 1,
+  "title": "Olá, Mundo!",
+  "hints": [
+    "Use System.out.println(\"...\");",
+    "Não esqueça o ponto e vírgula no final."
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "System\\.out\\.println",
+      "failureMessage": "Use System.out.println para imprimir."
+    }
+  ]
+}

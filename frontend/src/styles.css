@@ -1,0 +1,239 @@
+:root {
+  --color-background: #10162f;
+  --color-surface: #1b2343;
+  --color-surface-raised: #252e55;
+  --color-border: #343e6b;
+  --color-text: #e8eaf6;
+  --color-text-muted: #9aa3c7;
+  --color-accent: #ffd300;
+  --color-success: #2ecc71;
+  --color-error: #ff6b6b;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+}
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 240px minmax(300px, 1fr) minmax(400px, 1.4fr);
+  height: 100vh;
+}
+
+.lesson-sidebar {
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.brand {
+  font-size: 18px;
+  margin: 0 0 16px;
+  color: var(--color-accent);
+}
+
+.progress-bar {
+  height: 8px;
+  background: var(--color-surface-raised);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--color-success);
+  transition: width 0.3s ease;
+}
+
+.progress-label {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.lesson-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lesson-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.lesson-list-item:hover {
+  background: var(--color-surface-raised);
+}
+
+.lesson-list-item.is-selected {
+  background: var(--color-surface-raised);
+  outline: 1px solid var(--color-accent);
+}
+
+.lesson-status-icon {
+  width: 24px;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.instructions-panel {
+  padding: 24px;
+  overflow-y: auto;
+  border-right: 1px solid var(--color-border);
+  line-height: 1.6;
+}
+
+.instructions-panel code {
+  background: var(--color-surface-raised);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.instructions-panel pre {
+  background: var(--color-surface);
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+.instructions-panel pre code {
+  background: none;
+  padding: 0;
+}
+
+.hint {
+  background: var(--color-surface);
+  border-left: 3px solid var(--color-accent);
+  padding: 8px 12px;
+  margin: 8px 0;
+}
+
+.workspace {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.loading-state {
+  align-items: center;
+  justify-content: center;
+  grid-column: 2 / 4;
+  color: var(--color-text-muted);
+}
+
+.editor-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.file-name {
+  font-family: monospace;
+  color: var(--color-text-muted);
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.primary-button,
+.secondary-button {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary-button {
+  background: var(--color-accent);
+  color: #10162f;
+}
+
+.primary-button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.secondary-button {
+  background: var(--color-surface-raised);
+  color: var(--color-text);
+}
+
+.editor-container {
+  flex: 1 1 60%;
+  min-height: 0;
+}
+
+.output-console {
+  flex: 0 0 35%;
+  overflow-y: auto;
+  padding: 12px;
+  background: #0b0f22;
+  border-top: 1px solid var(--color-border);
+  font-size: 14px;
+}
+
+.console-muted {
+  color: var(--color-text-muted);
+}
+
+.console-error {
+  color: var(--color-error);
+}
+
+.console-status-line {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+.console-output {
+  margin: 0 0 12px;
+  font-family: "JetBrains Mono", monospace;
+  white-space: pre-wrap;
+}
+
+.validation-banner {
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+
+.validation-banner ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.validation-banner.is-passed {
+  background: rgba(46, 204, 113, 0.15);
+  color: var(--color-success);
+}
+
+.validation-banner.is-failed {
+  background: rgba(255, 107, 107, 0.12);
+  color: var(--color-error);
+}

@@ -1,0 +1,19 @@
+{
+  "id": "05-condicionais",
+  "order": 5,
+  "title": "if / else",
+  "hints": [
+    "Use o operador >=",
+    "if (nota >= 7) { ... } else { ... }"
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "if\\s*\\(",
+      "failureMessage": "Use um if."
+    },
+    {
+      "regex": "else",
+      "failureMessage": "Use um else para o caso Reprovado."
+    }
+  ]
+}

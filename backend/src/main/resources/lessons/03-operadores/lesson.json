@@ -1,0 +1,19 @@
+{
+  "id": "03-operadores",
+  "order": 3,
+  "title": "Operadores aritméticos",
+  "hints": [
+    "largura * altura",
+    "Para a média: (8 + 7 + 9) / 3.0"
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "largura\\s*\\*\\s*altura|altura\\s*\\*\\s*largura",
+      "failureMessage": "Calcule a área multiplicando largura por altura."
+    },
+    {
+      "regex": "double\\s+\\w+",
+      "failureMessage": "Guarde a média em uma variável double."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "06-switch",
+  "order": 6,
+  "title": "switch",
+  "hints": [
+    "case 3 -> System.out.println(\"Quarta-feira\");"
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "switch\\s*\\(",
+      "failureMessage": "Use um switch."
+    },
+    {
+      "regex": "default",
+      "failureMessage": "Inclua um default."
+    }
+  ]
+}

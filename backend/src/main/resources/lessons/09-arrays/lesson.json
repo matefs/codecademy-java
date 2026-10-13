@@ -1,0 +1,19 @@
+{
+  "id": "09-arrays",
+  "order": 9,
+  "title": "Arrays",
+  "hints": [
+    "Crie int soma = 0 antes do laço.",
+    "for (int valor : valores) soma += valor;"
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "for\\s*\\(",
+      "failureMessage": "Use um laço para percorrer o array."
+    },
+    {
+      "regex": "valores",
+      "failureMessage": "Percorra o array valores."
+    }
+  ]
+}

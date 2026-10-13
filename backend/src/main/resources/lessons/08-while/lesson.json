@@ -1,0 +1,15 @@
+{
+  "id": "08-while",
+  "order": 8,
+  "title": "Laço while",
+  "hints": [
+    "while (contador > 0)",
+    "Não esqueça de decrementar: contador--; senão o loop é infinito."
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "while\\s*\\(",
+      "failureMessage": "Use um laço while."
+    }
+  ]
+}

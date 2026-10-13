@@ -1,0 +1,19 @@
+{
+  "id": "10-metodos",
+  "order": 10,
+  "title": "Métodos",
+  "hints": [
+    "O método fica dentro da classe Main, fora do main.",
+    "return numero * 2;"
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "static\\s+int\\s+dobro\\s*\\(\\s*int\\s+\\w+\\s*\\)",
+      "failureMessage": "Declare static int dobro(int numero)."
+    },
+    {
+      "regex": "dobro\\s*\\(\\s*21\\s*\\)",
+      "failureMessage": "Chame dobro(21) no main."
+    }
+  ]
+}

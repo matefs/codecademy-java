@@ -1,0 +1,19 @@
+{
+  "id": "04-strings",
+  "order": 4,
+  "title": "Métodos de String",
+  "hints": [
+    "linguagem.toUpperCase()",
+    "palavra.length()"
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "\\.toUpperCase\\s*\\(\\s*\\)",
+      "failureMessage": "Use toUpperCase()."
+    },
+    {
+      "regex": "\\.length\\s*\\(\\s*\\)",
+      "failureMessage": "Use length()."
+    }
+  ]
+}

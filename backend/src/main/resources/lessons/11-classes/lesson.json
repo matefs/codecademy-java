@@ -1,0 +1,23 @@
+{
+  "id": "11-classes",
+  "order": 11,
+  "title": "Classes e objetos",
+  "hints": [
+    "A classe Cachorro pode ficar no mesmo arquivo, sem public.",
+    "new Cachorro(\"Rex\").latir();"
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "class\\s+Cachorro",
+      "failureMessage": "Crie a classe Cachorro."
+    },
+    {
+      "regex": "new\\s+Cachorro\\s*\\(",
+      "failureMessage": "Instancie com new Cachorro(...)."
+    },
+    {
+      "regex": "\\.latir\\s*\\(\\s*\\)",
+      "failureMessage": "Chame o método latir()."
+    }
+  ]
+}
