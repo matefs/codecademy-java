@@ -4,17 +4,41 @@ Uma variável do tipo da superclasse pode apontar para qualquer subclasse. Ao ch
 
 ```java
 class Animal {
-    void falar() { System.out.println("..."); }
+    void falar() {
+        System.out.println("...");
+    }
 }
 
 class Pato extends Animal {
     @Override
-    void falar() { System.out.println("Quack"); }
+    void falar() {
+        System.out.println("Quack");
+    }
 }
 
-Animal animal = new Pato();
-animal.falar(); // Quack
+class Vaca extends Animal {
+    @Override
+    void falar() {
+        System.out.println("Muuu");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal = new Pato();
+        animal.falar(); // Quack
+
+        animal = new Vaca();
+        animal.falar(); // Muuu
+
+        animal = new Animal();
+        animal.falar(); // ...
+    }
+}
 ```
+
+- O método precisa existir na superclasse: se `Animal` não tivesse `falar()`, `animal.falar()` não compilaria, mesmo o objeto sendo um `Pato`.
+- `@Override` é opcional, mas faz o compilador avisar se você errar o nome ou os parâmetros. Sem ele, um `void fala()` criaria um método novo em silêncio, em vez de sobrescrever.
 
 ## Tarefa
 1. Crie a classe `Instrumento` com o método `tocar()`.

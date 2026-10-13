@@ -11,9 +11,24 @@ class Termometro {
         temperatura = novaTemperatura;
     }
 
-    int getTemperatura() { return temperatura; }
+    int getTemperatura() {
+        return temperatura;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Termometro termometro = new Termometro();
+        termometro.ajustar(25);
+        termometro.ajustar(-500); // ignorado: abaixo do zero absoluto
+        // termometro.temperatura = -500; // não compila: temperatura é private
+        System.out.println(termometro.getTemperatura()); // 25
+    }
 }
 ```
+
+- `private` vale por classe: dentro de `Main`, `termometro.temperatura = -500;` não compila. A única forma de mudar o valor é por `ajustar`, que valida.
+- Por isso não se cria um `setTemperatura` que aceita qualquer coisa: isso devolveria o acesso livre que o `private` tirou.
 
 ## Tarefa
 1. Crie a classe `ContaBancaria` com o campo `private int saldo`.
