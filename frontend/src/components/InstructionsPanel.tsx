@@ -10,7 +10,7 @@ const markdownComponentsWithMonacoCodeBlocks: Components = {
     const codeElement = children as ReactElement<{ className?: string; children?: ReactNode }>;
     const languageMatch = /language-([\w-]+)/.exec(codeElement.props.className ?? "");
     const sourceCode = String(codeElement.props.children ?? "").replace(/\n$/, "");
-    return <MonacoHighlightedCodeBlock sourceCode={sourceCode} languageId={languageMatch?.[1] ?? "java"} />;
+    return <MonacoHighlightedCodeBlock sourceCode={sourceCode} languageId={languageMatch?.[1] ?? "plaintext"} />;
   },
 };
 
