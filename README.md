@@ -4,7 +4,7 @@
 Plataforma local estilo Codecademy para praticar Java: lições com instruções, editor Monaco, execução do código e validação automática.
 
 ```
-[React + Monaco :5173] --/api--> [Spring Boot :8080] --> javax.tools (compila in-process)
+[React + Monaco :5173] --/api--> [Spring Boot :8081] --> javax.tools (compila in-process)
                                                     \--> java -Xmx128m Main (processo filho, timeout 5s)
 ```
 
@@ -15,7 +15,7 @@ Plataforma local estilo Codecademy para praticar Java: lições com instruções
 
 ## Rodar
 - Tudo junto: `./run.sh` (instala dependências do frontend se faltar; Ctrl+C para os dois processos)
-- Só o backend: `cd backend && mvn spring-boot:run` → http://127.0.0.1:8080
+- Só o backend: `cd backend && mvn spring-boot:run` → http://127.0.0.1:8081
 - Só o frontend: `cd frontend && npm install && npm run dev` → http://localhost:5173
 
 ## Testes

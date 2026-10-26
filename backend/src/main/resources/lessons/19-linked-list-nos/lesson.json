@@ -1,0 +1,28 @@
+{
+  "id": "19-linked-list-nos",
+  "order": 19,
+  "title": "Linked list: nós",
+  "hints": [
+    "Um campo pode ter o tipo da própria classe: dentro de class No, declare No proximo;",
+    "Para ligar dois nós, atribua o segundo ao campo proximo do primeiro.",
+    "Guarde o nó atual numa variável e, a cada volta do while, troque-a pelo próximo dele. Pare quando ela for null."
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "class\\s+No\\b",
+      "failureMessage": "Crie a classe No."
+    },
+    {
+      "regex": "No\\s+proximo\\s*;",
+      "failureMessage": "O nó precisa de um campo No proximo."
+    },
+    {
+      "regex": "while\\s*\\(",
+      "failureMessage": "Use um while para percorrer os nós."
+    },
+    {
+      "regex": "\\.proximo\\b",
+      "failureMessage": "Siga as referências com .proximo."
+    }
+  ]
+}

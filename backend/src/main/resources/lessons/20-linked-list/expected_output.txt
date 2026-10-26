@@ -1,0 +1,5 @@
+10 -> 20 -> 30 -> null
+5 -> 10 -> 20 -> 30 -> null
+Tamanho: 4
+Contém 20: true
+Contém 99: false

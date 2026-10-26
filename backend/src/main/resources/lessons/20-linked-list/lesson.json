@@ -1,0 +1,27 @@
+{
+  "id": "20-linked-list",
+  "order": 20,
+  "title": "Linked list",
+  "hints": [
+    "Percorra com: No atual = cabeca; while (atual != null) { ...; atual = atual.proximo; }",
+    "Para inserir no início: No novo = new No(valor); novo.proximo = cabeca; cabeca = novo;"
+  ],
+  "requiredCodePatterns": [
+    {
+      "regex": "class\\s+No\\b",
+      "failureMessage": "Crie a classe No."
+    },
+    {
+      "regex": "No\\s+proximo\\s*;",
+      "failureMessage": "O nó precisa de um campo No proximo."
+    },
+    {
+      "regex": "class\\s+Lista\\b",
+      "failureMessage": "Crie a classe Lista."
+    },
+    {
+      "regex": "\\.proximo\\b",
+      "failureMessage": "Siga as referências com .proximo."
+    }
+  ]
+}

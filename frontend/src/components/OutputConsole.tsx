@@ -1,3 +1,4 @@
+import { PartyPopper } from "lucide-react";
 import type { ExecutionStatus, SubmissionResponse } from "../api/lessonsApi";
 
 interface OutputConsoleProps {
@@ -39,7 +40,10 @@ export function OutputConsole({ submissionResponse, isSubmitting, requestErrorMe
       <pre className="console-output">{consoleText || "(sem saída)"}</pre>
       <div className={`validation-banner ${validation.passed ? "is-passed" : "is-failed"}`}>
         {validation.passed ? (
-          "🎉 Correto! Lição concluída."
+          <span className="validation-passed-message">
+            <PartyPopper size={18} />
+            Correto! Lição concluída.
+          </span>
         ) : (
           <ul>
             {validation.feedbackMessages.map((feedbackMessage) => (

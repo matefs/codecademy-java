@@ -2,7 +2,7 @@
 set -euo pipefail
 
 PROJECT_ROOT_DIRECTORY="$(cd "$(dirname "$0")" && pwd)"
-BACKEND_PORT=8080
+BACKEND_PORT=8081
 FRONTEND_PORT=5173
 
 stop_all_child_processes() {
